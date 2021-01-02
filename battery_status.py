@@ -21,7 +21,7 @@ class ReadPower(object):
         measure = self.adc.read_adc(channel=0, gain=self.volt_gain) # Value 17200 eq 12.20V
         voltage_factor = 17200 / 12.2
         actual_voltage = measure / voltage_factor
-        percentage = actual_voltage / self.max_volt
+        percentage = round(actual_voltage / self.max_volt, 4) * 100
 
         return percentage
 
