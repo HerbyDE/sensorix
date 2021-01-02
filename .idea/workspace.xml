@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Cleaned up git" />
+    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Initial commit.">
+      <change afterPath="$PROJECT_DIR$/battery_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temperature_humidity.py" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_humidity.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="3394f2ba-77b2-46ee-a30f-42cb9a1e1cbf" />
   <component name="ProjectId" id="1m1d6jPngNlKKY4JQJlPeDgL89C" />
@@ -78,6 +81,7 @@
       <workItem from="1608664877066" duration="1682000" />
       <workItem from="1609066591545" duration="423000" />
       <workItem from="1609517510594" duration="1534000" />
+      <workItem from="1609610813766" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up git">
       <created>1609610524695</created>
@@ -86,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609610524696</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit.">
+      <created>1609610877297</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609610877297</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,21 +117,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cleaned up git" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up git" />
+    <MESSAGE value="Initial commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="594" y="351" key="Github.ShareDialog" timestamp="1609610452674">
+    <state x="594" y="351" key="Github.ShareDialog" timestamp="1609610929537">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="594" y="351" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610452674" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609610537962">
+    <state x="594" y="351" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610929537" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609611093564">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609610537962" />
-    <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609610390476">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609611093564" />
+    <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609610856535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610390476" />
+    <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610856535" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
