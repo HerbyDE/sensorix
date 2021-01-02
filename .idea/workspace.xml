@@ -10,8 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="changed relative to absolute project paths.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Added NMEA sentence for voltage.">
       <change beforePath="$PROJECT_DIR$/battery_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/battery_status.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +33,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -110,6 +110,7 @@
       <workItem from="1609612536970" duration="1171000" />
       <workItem from="1609613825086" duration="798000" />
       <workItem from="1609614717244" duration="227000" />
+      <workItem from="1609614961465" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up git">
       <created>1609610524695</created>
@@ -195,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609613764861</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added NMEA sentence for voltage.">
+      <created>1609615232127</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609615232127</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +228,8 @@
     <MESSAGE value="Added pip requirements" />
     <MESSAGE value="Added git ignore" />
     <MESSAGE value="changed relative to absolute project paths." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed relative to absolute project paths." />
+    <MESSAGE value="Added NMEA sentence for voltage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added NMEA sentence for voltage." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
