@@ -49,6 +49,28 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,7 +107,9 @@
       <workItem from="1609517510594" duration="1534000" />
       <workItem from="1609610813766" duration="921000" />
       <workItem from="1609612090369" duration="327000" />
-      <workItem from="1609612536970" duration="1125000" />
+      <workItem from="1609612536970" duration="1171000" />
+      <workItem from="1609613825086" duration="798000" />
+      <workItem from="1609614717244" duration="227000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up git">
       <created>1609610524695</created>
@@ -164,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609612621640</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed relative to absolute project paths.">
+      <created>1609613764861</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609613764861</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,32 +221,6 @@
     <MESSAGE value="Added git ignore" />
     <MESSAGE value="changed relative to absolute project paths." />
     <option name="LAST_COMMIT_MESSAGE" value="changed relative to absolute project paths." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="184" y="109" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609611269830">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="184" y="109" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1609611269830" />
-    <state x="408" y="190" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1609613057085">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="408" y="190" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1609613057085" />
-    <state x="594" y="351" key="Github.ShareDialog" timestamp="1609610929537">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="594" y="351" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610929537" />
-    <state x="229" y="86" key="SettingsEditor" timestamp="1609613025873">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1609613025873" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609612622949">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609612622949" />
-    <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609610856535">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610856535" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
