@@ -4,8 +4,8 @@ import signal
 import time
 import socket
 
-# Adafruit libraries to address the i2c sensors
-from .utils import ADS1x15, SSD1306
+# Adafruit libraries to address the i2c sensor
+import Adafruit_ADS1x15
 
 
 class ReadPower(object):
@@ -15,7 +15,7 @@ class ReadPower(object):
         self.min_volt = 3*3.3 # Min 9.9V
         self.max_volt = 3*4.2 # Max 12.6V
         self.volt_gain = 1
-        self.adc = ADS1x15.ADS1115()
+        self.adc = Adafruit_ADS1x15.ADS1115()
 
     def measure_voltage(self):
         measure = self.adc.read_adc(channel=0, gain=self.volt_gain)
