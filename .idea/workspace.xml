@@ -10,7 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Added pip requirements">
+    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Added git ignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battery_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/battery_status.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +40,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -80,7 +82,8 @@
       <workItem from="1608664877066" duration="1682000" />
       <workItem from="1609066591545" duration="423000" />
       <workItem from="1609517510594" duration="1534000" />
-      <workItem from="1609610813766" duration="658000" />
+      <workItem from="1609610813766" duration="921000" />
+      <workItem from="1609612090369" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up git">
       <created>1609610524695</created>
@@ -117,7 +120,35 @@
       <option name="project" value="LOCAL" />
       <updated>1609611387392</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added pip requirements">
+      <created>1609611912316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609611912316</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added pip requirements">
+      <created>1609612275176</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609612275176</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added pip requirements">
+      <created>1609612317662</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609612317663</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added git ignore">
+      <created>1609612369060</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609612369060</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +171,8 @@
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Added battery status." />
     <MESSAGE value="Added pip requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pip requirements" />
+    <MESSAGE value="Added git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added git ignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="109" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609611269830">
@@ -151,10 +183,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="594" y="351" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610929537" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609611388354">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609611914193">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609611388354" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609611914193" />
     <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609610856535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

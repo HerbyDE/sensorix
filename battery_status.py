@@ -5,7 +5,7 @@ import time
 import socket
 
 # Adafruit libraries to address the i2c sensors
-from utils import ADS1x15, SSD1306
+from .utils import ADS1x15, SSD1306
 
 
 class ReadPower(object):
