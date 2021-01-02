@@ -10,7 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Added battery status." />
+    <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Added pip requirements">
+      <change beforePath="$PROJECT_DIR$/battery_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/battery_status.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +80,7 @@
       <workItem from="1608664877066" duration="1682000" />
       <workItem from="1609066591545" duration="423000" />
       <workItem from="1609517510594" duration="1534000" />
-      <workItem from="1609610813766" duration="425000" />
+      <workItem from="1609610813766" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up git">
       <created>1609610524695</created>
@@ -101,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609611210929</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added pip requirements">
+      <created>1609611337218</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609611337218</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added pip requirements">
+      <created>1609611387392</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609611387392</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +139,8 @@
     <MESSAGE value="Cleaned up git" />
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Added battery status." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added battery status." />
+    <MESSAGE value="Added pip requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pip requirements" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="109" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609611269830">
@@ -134,10 +151,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="594" y="351" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1609610929537" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609611212342">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609611388354">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609611212342" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609611388354" />
     <state x="369" y="333" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609610856535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

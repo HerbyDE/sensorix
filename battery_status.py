@@ -5,7 +5,7 @@ import time
 import socket
 
 # Adafruit libraries to address the i2c sensors
-import Adafruit_ADS1x15
+import Adafruit_ADS1X15
 import Adafruit_SSD1306
 
 
