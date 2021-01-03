@@ -7,8 +7,10 @@ import socket
 # Adafruit libraries to address the i2c sensor
 import Adafruit_ADS1x15
 
+from utils import transform_to_nmea_sentence
 
-class ReadPower(object):
+
+class VoltMeter(object):
 
     def __init__(self):
         self.i2c_bus = 0x56
@@ -20,28 +22,17 @@ class ReadPower(object):
     def measure_voltage(self):
         measure = self.adc.read_adc(channel=0, gain=self.volt_gain) # Value 17200 eq 12.20V
         voltage_factor = 17200 / 12.2
-        actual_voltage = measure / voltage_factor
-        percentage = round(actual_voltage / self.max_volt, 4) * 100
-
+        actual_voltage = round(measure / voltage_factor, 2)
+        if actual_voltage > self.max_volt:
+            percentage = 101
+        else:
+            percentage = round(actual_voltage / self.max_volt, 4) * 100
         return percentage
 
-    def transform_to_nmea_sentence(self, key, value):
-        sentence = f"POV, {key}, {value}"
+    def generate_measurement_point(self):
+        return transform_to_nmea_sentence(key="V", value=self.measure_voltage())
 
-        # Generate the checksum as required by the OpenVario Protocol.
-        packet = str(bytes(sentence, encoding="utf-8"))
-        checksum = 0
-        for bt in packet:
-            checksum ^= ord(bt)
-
-        return f"${sentence}*{hex(checksum)}"
-
-    def print_measure(self):
+    def print_measurement(self):
         voltage = self.measure_voltage()
-        msg = self.transform_to_nmea_sentence(key="V", value=voltage)
+        msg = transform_to_nmea_sentence(key="V", value=voltage)
         print(msg)
-
-
-if __name__ == '__main__':
-    pr = ReadPower()
-    pr.print_measure()

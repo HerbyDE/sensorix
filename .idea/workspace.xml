@@ -11,7 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3057280c-951f-4f04-9e7c-b995e2c224c7" name="Default Changelist" comment="Added NMEA sentence for voltage.">
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barometric_pressure.py" beforeDir="false" afterPath="$PROJECT_DIR$/barometric_pressure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battery_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/battery_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +44,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -110,7 +117,8 @@
       <workItem from="1609612536970" duration="1171000" />
       <workItem from="1609613825086" duration="798000" />
       <workItem from="1609614717244" duration="227000" />
-      <workItem from="1609614961465" duration="331000" />
+      <workItem from="1609614961465" duration="1887000" />
+      <workItem from="1609622265842" duration="2082000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up git">
       <created>1609610524695</created>
@@ -203,7 +211,28 @@
       <option name="project" value="LOCAL" />
       <updated>1609615232127</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added NMEA sentence for voltage.">
+      <created>1609615294417</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609615294417</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added NMEA sentence for voltage.">
+      <created>1609615359099</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609615359099</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added NMEA sentence for voltage.">
+      <created>1609615419924</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609615419924</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,16 +259,5 @@
     <MESSAGE value="changed relative to absolute project paths." />
     <MESSAGE value="Added NMEA sentence for voltage." />
     <option name="LAST_COMMIT_MESSAGE" value="Added NMEA sentence for voltage." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

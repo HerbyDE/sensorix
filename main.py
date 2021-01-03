@@ -1,16 +1,40 @@
-# This is a sample Python script.
+# This is the main sensorix script containing all required i2c connections.
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import busio
+import adafruit_bmp280
+import board
+import time
+
+from battery_status import VoltMeter
+from barometric_pressure import Barometer
+from battery_status import VoltMeter
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+class Sensorix(object):
+
+    def __init__(self):
+        self.battery = VoltMeter()
+        self.baro = Barometer()
+
+    def read_batometric_data(self):
+        sp_measurement = self.baro.read_static_pressure()
+        dp_measurement = self.baro.read_dynamic_pressure()
+
+        return sp_measurement, dp_measurement
+
+    def read_outside_temperature(self):
+        measurement = self.baro.read_temperature()
+        return measurement
+
+    def read_battery_data(self):
+        # Default I2C address for the A/D converter is 0x48 (48)
+        measurement = self.battery.generate_measurement_point()
+        return measurement
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    sens = Sensorix()
+    while True:
+        measurement = sens.read_battery_data()
+        print(measurement)
+        time.sleep(1)
