@@ -27,7 +27,7 @@ class VoltMeter(object):
             percentage = 101
         else:
             percentage = round(actual_voltage / self.max_volt, 4) * 100
-        return percentage
+        return actual_voltage
 
     def generate_measurement_point(self):
         return transform_to_nmea_sentence(key="V", value=self.measure_voltage())
