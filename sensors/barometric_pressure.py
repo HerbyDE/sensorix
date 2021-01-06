@@ -31,7 +31,7 @@ class Barometer(object):
         adj_pressure = self.sp_i2c.pressure + self.sp_i2c.altitude / (30 * 0.3048)
 
         if adj_pressure >= 0:
-            output = "+" + round(adj_pressure, ndigits=2)
+            output = "+" + str(round(adj_pressure, ndigits=2))
         else:
             output = round(adj_pressure, ndigits=2)
         return output
