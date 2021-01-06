@@ -1,8 +1,8 @@
 import time
 import config
 
-from barometric_pressure import Barometer
-from battery_status import VoltMeter
+from sensors.barometric_pressure import Barometer
+from sensors.battery_status import VoltMeter
 
 from utils import transform_to_nmea_sentence
 
