@@ -11,4 +11,6 @@ def transform_to_nmea_sentence(data):
     # Return the entire NMEA record.
     checksum = str(hex(checksum)[2:]).upper()
 
-    return f"${sentence}*{checksum}"
+    return f"${sentence}*{checksum}\n"
+
+
