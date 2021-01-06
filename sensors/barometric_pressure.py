@@ -29,7 +29,15 @@ class Barometer(object):
         :return:
         """
         adj_pressure = self.sp_i2c.pressure + self.sp_i2c.altitude / (30 * 0.3048)
-        return round(adj_pressure, ndigits=2)
+
+        if adj_pressure >= 0:
+            output = "+" + round(adj_pressure, ndigits=2)
+        else:
+            output = round(adj_pressure, ndigits=2)
+        return output
+
+    def read_dynamic_pressure(self):
+        return "+0.00"
 
     def read_temperature(self):
         """
@@ -48,8 +56,9 @@ class Barometer(object):
     def generate_barometric_output(self):
 
         static_pressure = self.read_static_pressure()
+        dynamic_pressure = self.read_dynamic_pressure()
         temp = self.read_temperature()
         # baro_height = self.read_barometric_height()
 
-        nmea_sequence = f"P,{static_pressure},T,{temp}"
+        nmea_sequence = f"P,{static_pressure},Q,{dynamic_pressure},T,{temp},E,+2.14"
         return nmea_sequence
