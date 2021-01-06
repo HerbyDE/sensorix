@@ -27,7 +27,7 @@ class Barometer(object):
         '''
 
         adj_pressure = self.sp_i2c.pressure * pow(1 - 600 / 44330.0, 5.255)
-        return adj_pressure
+        return self.sp_i2c.altitude
 
         '''
         # Raw inputs from i2c bus
