@@ -5,7 +5,7 @@ import adafruit_bmp280
 import board
 import time
 
-# from barometric_pressure import Barometer
+from barometric_pressure import Barometer
 from battery_status import VoltMeter
 
 
@@ -13,18 +13,14 @@ class Sensorix(object):
 
     def __init__(self):
         self.battery = VoltMeter()
-        # self.baro = Barometer()
-    """
-    def read_batometric_data(self):
+        self.baro = Barometer()
+
+    def read_barometric_data(self):
         sp_measurement = self.baro.read_static_pressure()
-        dp_measurement = self.baro.read_dynamic_pressure()
+        # dp_measurement = self.baro.read_dynamic_pressure()
 
-        return sp_measurement, dp_measurement
+        return sp_measurement
 
-    def read_outside_temperature(self):
-        measurement = self.baro.read_temperature()
-        return measurement
-    """
     def read_battery_data(self):
         # Default I2C address for the A/D converter is 0x48 (48)
         measurement = self.battery.generate_measurement_point()
@@ -34,6 +30,7 @@ class Sensorix(object):
 if __name__ == "__main__":
     sens = Sensorix()
     while True:
-        measurement = sens.read_battery_data()
-        print(measurement)
-        time.sleep(1)
+        m1 = sens.read_battery_data()
+        m2 = sens.read_barometric_data()
+        print(f"Battery: {m1}. Baro: {m2}")
+        time.sleep(.2)

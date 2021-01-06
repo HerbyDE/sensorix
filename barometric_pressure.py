@@ -6,11 +6,12 @@ import adafruit_bmp280
 class Barometer(object):
 
     def __init__(self):
-        self.static_pressure_bus = 0x00
-        self.dynamic_pressure_bus = 0x01
+        self.i2c_bus = 0x01
+        self.i2c_sp_channel = 0x76
+        self.i2c_dp_channel = 0x77
         self.i2c = busio.I2C(board.SCL, board.SDA)
-        self.sp_i2c = adafruit_bmp280.Adafruit_BMP280_I2C(i2c=self.i2c, address=self.static_pressure_bus)
-        self.dp_i2c = adafruit_bmp280.Adafruit_BMP280_I2C(i2c=self.i2c, address=self.dynamic_pressure_bus)
+        self.sp_i2c = adafruit_bmp280.Adafruit_BMP280_I2C(i2c=self.i2c, address=self.i2c_sp_channel)
+        self.dp_i2c = adafruit_bmp280.Adafruit_BMP280_I2C(i2c=self.i2c, address=self.i2c_dp_channel)
 
         # Configure the default sea level pressure of 1013.25 hPa
         self.sp_i2c.sea_level_pressure = 1013.25
