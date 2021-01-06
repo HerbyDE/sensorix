@@ -23,4 +23,4 @@ class VoltMeter(object):
         return actual_voltage
 
     def generate_measurement_point(self):
-        return f"V, {self.measure_voltage()}"
+        return f"V,{self.measure_voltage()}"

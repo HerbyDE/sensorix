@@ -4,6 +4,8 @@
 BATTERY_CAPACITY_MAX = 12.65  # 12.65 is the standard for full lead batteries
 BATTERY_CAPACITY_MIN = 11.90  # 11.90 is the standard for empty lead batteries
 
+SEA_LEVEL_PRESSURE = 1013.25  # hPa. Reference for the barometric measures.
+
 
 # Measurement settings
 MEASUREMENT_SYSTEM = "METRIC"  # Alternative: IMPERIAL. Without function yet. TODO: Add imperial measures.

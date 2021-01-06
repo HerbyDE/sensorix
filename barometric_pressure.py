@@ -1,6 +1,7 @@
 import busio
 import board
 import adafruit_bmp280
+import config
 
 from smbus2 import smbus2
 
@@ -17,7 +18,7 @@ class Barometer(object):
         # self.dp_i2c = adafruit_bmp280.Adafruit_BMP280_I2C(i2c=self.i2c, address=self.i2c_dp_channel)
 
         # Configure the default sea level pressure of 1013.25 hPa
-        self.sp_i2c.sea_level_pressure = 1013.25
+        self.sp_i2c.sea_level_pressure = config.SEA_LEVEL_PRESSURE
         # self.dp_i2c.sea_level_pressure = 1013.25
 
     def read_static_pressure(self):
@@ -48,7 +49,7 @@ class Barometer(object):
 
         static_pressure = self.read_static_pressure()
         temp = self.read_temperature()
-        baro_height = self.read_barometric_height()
+        # baro_height = self.read_barometric_height()
 
-        nmea_sequence = f"P, {static_pressure}, T, {temp}"
+        nmea_sequence = f"P,{static_pressure},T,{temp}"
         return nmea_sequence
