@@ -51,3 +51,4 @@ class Barometer(object):
         baro_height = self.read_barometric_height()
 
         nmea_sequence = f"P, {static_pressure}, T, {temp}"
+        return nmea_sequence
