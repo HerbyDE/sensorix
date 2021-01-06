@@ -3,7 +3,7 @@ import time
 from barometric_pressure import Barometer
 from battery_status import VoltMeter
 
-from .utils import transform_to_nmea_sentence
+from utils import transform_to_nmea_sentence
 
 
 class Sensorix(object):

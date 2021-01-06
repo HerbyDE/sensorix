@@ -1,13 +1,5 @@
-import os
-import sys
-import signal
-import time
-import socket
-
 # Adafruit libraries to address the i2c sensor
 import Adafruit_ADS1x15
-
-from utils import transform_to_nmea_sentence
 
 
 class VoltMeter(object):
