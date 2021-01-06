@@ -33,7 +33,7 @@ if __name__ == "__main__":
     while True:
         voltage = sens.battery.generate_measurement_point()
         baro_data = sens.baro.generate_barometric_output()
-        output = transform_to_nmea_sentence(f"{baro_data}, {voltage}")
+        output = transform_to_nmea_sentence(f"{baro_data},{voltage}")
         sock.sendto(bytes(output.encode("utf-8")), ("127.0.0.1".encode("utf-8"), 4353))
         print(output.encode("utf-8"))
         time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
