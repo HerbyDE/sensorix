@@ -1,4 +1,4 @@
-from tcpcom import TCPServer
+from interfaces.tcpcom import TCPServer
 import time
 
 
