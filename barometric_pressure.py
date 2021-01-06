@@ -22,12 +22,14 @@ class Barometer(object):
 
     def read_static_pressure(self):
         '''
-        This returns the QNH for hight estimation.
+        This returns the QNH for hight estimation. To the raw measurement we add the pressure relative to MSL,
+        which is 1 hPa per 30ft. BMP280 returns the height in meter. Thus, we convert the 1 hPa per 30ft into
+        1 hPa per meter.
         :return:
         '''
 
-        adj_pressure = self.sp_i2c.pressure * pow(1 - 600 / 44330.0, 5.255)
-        return self.sp_i2c.altitude
+        adj_pressure = self.sp_i2c.pressure + self.sp_i2c.altitude / (30 * 0.3048)
+        return adj_pressure
 
         '''
         # Raw inputs from i2c bus
