@@ -26,7 +26,7 @@ class Barometer(object):
         :return:
         '''
 
-        adj_pressure = self.sp_i2c.pressure * pow(1 - self.sp_i2c.altitude / 44330.0, 5.255)
+        adj_pressure = self.sp_i2c.pressure * pow(1 - 600 / 44330.0, 5.255)
         return adj_pressure
 
         '''
