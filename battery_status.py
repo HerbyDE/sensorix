@@ -1,13 +1,14 @@
 # Adafruit libraries to address the i2c sensor
 import Adafruit_ADS1x15
+import config
 
 
 class VoltMeter(object):
 
     def __init__(self):
         self.i2c_bus = 0x56
-        self.min_volt = 11.9 # Volt. Empty
-        self.max_volt = 12.65 # Volt. Full
+        self.min_volt = config.BATTERY_CAPACITY_MIN # Volt. Empty
+        self.max_volt = config.BATTERY_CAPACITY_MAX # Volt. Full
         self.volt_gain = 1
         self.adc = Adafruit_ADS1x15.ADS1115()
 

@@ -1,4 +1,5 @@
 import time
+import config
 
 from barometric_pressure import Barometer
 from battery_status import VoltMeter
@@ -32,4 +33,4 @@ if __name__ == "__main__":
 
         output = transform_to_nmea_sentence(f"{baro_data}, {voltage}")
         print(output)
-        time.sleep(.2)
+        time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
