@@ -13,3 +13,5 @@ MEASUREMENT_SYSTEM = "METRIC"  # Alternative: IMPERIAL. Without function yet. TO
 # resource utilization and battery drain. A good indication is to have between 5 and 10 samples per second.
 SENSOR_SAMPLING_RATE_PER_SECOND = 5  # Samples per second.
 
+# System Configuration
+XCSOAR_PORT = 4353  # Default OpenVario Port for XCSoar

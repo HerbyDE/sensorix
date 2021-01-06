@@ -1,10 +1,12 @@
 import time
 import config
+import socket
 
 from sensors.barometric_pressure import Barometer
 from sensors.battery_status import VoltMeter
 
 from utils import transform_to_nmea_sentence
+from interfaces.xcsoar_tcp_stream_server import ReactiveSocketServer
 
 
 class Sensorix(object):
@@ -27,10 +29,11 @@ class Sensorix(object):
 
 if __name__ == "__main__":
     sens = Sensorix()
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     while True:
         voltage = sens.battery.generate_measurement_point()
         baro_data = sens.baro.generate_barometric_output()
-
         output = transform_to_nmea_sentence(f"{baro_data}, {voltage}")
+        sock.sendto(data=bytes(output), address=("127.0.0.1", 4353))
         print(output)
         time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
