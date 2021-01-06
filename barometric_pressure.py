@@ -27,7 +27,6 @@ class Barometer(object):
         1 hPa per meter.
         :return:
         '''
-
         adj_pressure = self.sp_i2c.pressure + self.sp_i2c.altitude / (30 * 0.3048)
         return adj_pressure
 
