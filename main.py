@@ -1,12 +1,9 @@
-# This is the main sensorix script containing all required i2c connections.
-
-import busio
-import adafruit_bmp280
-import board
 import time
 
 from barometric_pressure import Barometer
 from battery_status import VoltMeter
+
+from .utils import transform_to_nmea_sentence
 
 
 class Sensorix(object):
@@ -30,7 +27,9 @@ class Sensorix(object):
 if __name__ == "__main__":
     sens = Sensorix()
     while True:
-        m1 = sens.read_battery_data()
-        m2 = sens.read_barometric_data()
-        print(f"Battery: {m1}. Baro: {m2}")
+        voltage = sens.battery.generate_measurement_point()
+        baro_data = sens.baro.generate_barometric_output()
+
+        output = transform_to_nmea_sentence(f"{baro_data}, {voltage}")
+        print(output)
         time.sleep(.2)

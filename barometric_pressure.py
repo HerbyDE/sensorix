@@ -21,47 +21,33 @@ class Barometer(object):
         # self.dp_i2c.sea_level_pressure = 1013.25
 
     def read_static_pressure(self):
-        '''
-        This returns the QNH for hight estimation. To the raw measurement we add the pressure relative to MSL,
+        """
+        This returns the QNH. To the raw measurement we add the pressure relative to MSL,
         which is 1 hPa per 30ft. BMP280 returns the height in meter. Thus, we convert the 1 hPa per 30ft into
         1 hPa per meter.
         :return:
-        '''
+        """
         adj_pressure = self.sp_i2c.pressure + self.sp_i2c.altitude / (30 * 0.3048)
-        return adj_pressure
-
-        '''
-        # Raw inputs from i2c bus
-        loc_pressure = self.sp_i2c.pressure
-        loc_temp = self.sp_i2c.pressure
-
-        # Adjustment coefficients
-        temp = [0, 0, 0]
-        pres = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-        # Get calibration data from BMP280 sensor
-        cal_data = smbus2.SMBus(self.i2c_bus_addr).read_i2c_block_data(self.i2c_sp_channel, 0x88, 24)
-
-        # Modify temperature coefficients as given in the BMP280 data sheet.
-        temp[0] = cal_data[1] * 256 + cal_data[0]
-        temp[1] = cal_data[3] * 256 + cal_data[2]
-        temp[2] = cal_data[5] * 256 + cal_data[4]
-
-        if temp[1] > 32767:
-            temp[1] -= 65536
-        if temp[2] > 32767:
-            temp[2] -= 65536
-
-        # Modify pressure coefficients as given in the BMP280 data sheet.
-        pres[0] = cal_data[7] * 256 + cal_data[6]
-        for idx in range(0, 8):
-            pres[idx+1] = cal_data[2*idx+9] * 256 + cal_data[2*idx+8]
-            if pres[idx+1] > 32767:
-                pres[idx+1] -= 65536
-        '''
+        return round(adj_pressure, ndigits=2)
 
     def read_temperature(self):
-        return self.sp_i2c.temperature
+        """
+        This function returns the temperature in degree celsius based on the BMP280 sensor output.
+        :return:
+        """
+        return round(self.sp_i2c.temperature, ndigits=2)
 
-    # def read_dynamic_pressure(self):
-        # return self.dp_i2c
+    def read_barometric_height(self):
+        """
+        Returns the barometric height in meters.
+        :return:
+        """
+        return round(self.sp_i2c.altitude, ndigits=2)
+
+    def generate_barometric_output(self):
+
+        static_pressure = self.read_static_pressure()
+        temp = self.read_temperature()
+        baro_height = self.read_barometric_height()
+
+        nmea_sequence = f"P, {static_pressure}, T, {temp}"

@@ -1,6 +1,6 @@
 
-def transform_to_nmea_sentence(key, value):
-    sentence = f"POV,{key},{value}"
+def transform_to_nmea_sentence(data):
+    sentence = f"POV,{data}"
 
     # Generate the checksum as required by the OpenVario Protocol.
     packet = str(bytes(sentence, encoding="utf-8"))

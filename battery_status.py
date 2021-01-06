@@ -30,9 +30,4 @@ class VoltMeter(object):
         return actual_voltage
 
     def generate_measurement_point(self):
-        return transform_to_nmea_sentence(key="V", value=self.measure_voltage())
-
-    def print_measurement(self):
-        voltage = self.measure_voltage()
-        msg = transform_to_nmea_sentence(key="V", value=voltage)
-        print(msg)
+        return f"V, {self.measure_voltage()}"
