@@ -40,4 +40,7 @@ if __name__ == "__main__":
         sock.sendto(bytes(baro_nmea.encode("utf-8")), ("127.0.0.1".encode("utf-8"), 4353))
         sock.sendto(bytes(volt_nmea.encode("utf-8")), ("127.0.0.1".encode("utf-8"), 4353))
 
+        print(volt_nmea)
+        print(baro_nmea)
+
         time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
