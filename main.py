@@ -13,7 +13,7 @@ from interfaces.xcsoar_tcp_stream_server import ReactiveSocketServer
 class Sensorix(object):
 
     def __init__(self):
-        self.battery = VoltMeter()
+        # self.battery = VoltMeter()
         self.baro = Barometer()
 
     def read_barometric_data(self):
@@ -22,26 +22,26 @@ class Sensorix(object):
 
         return sp_measurement
 
-    def read_battery_data(self):
+    # def read_battery_data(self):
         # Default I2C address for the A/D converter is 0x48 (48)
-        measurement = self.battery.generate_measurement_point()
-        return measurement
+        # measurement = self.battery.generate_measurement_point()
+        # return measurement
 
 
 if __name__ == "__main__":
     sens = Sensorix()
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     while True:
-        voltage = sens.battery.generate_measurement_point()
+        # voltage = sens.battery.generate_measurement_point()
         baro_data = sens.baro.generate_barometric_output()
 
         baro_nmea = transform_to_nmea_sentence(baro_data)
-        volt_nmea = transform_to_nmea_sentence(voltage)
+        # volt_nmea = transform_to_nmea_sentence(voltage)
 
         sock.sendto(bytes(baro_nmea.encode("utf-8")), ("127.0.0.1".encode("utf-8"), 4353))
-        sock.sendto(bytes(volt_nmea.encode("utf-8")), ("127.0.0.1".encode("utf-8"), 4353))
+        # sock.sendto(bytes(volt_nmea.encode("utf-8")), ("127.0.0.1".encode("utf-8"), 4353))
 
-        print(volt_nmea)
+        # print(volt_nmea)
         print(baro_nmea)
 
         OLEDDisplayDriver.draw()
