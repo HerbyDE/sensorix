@@ -4,7 +4,7 @@ import socket
 
 from sensors.barometric_pressure import Barometer
 from sensors.battery_status import VoltMeter
-from sensors.oled_display import OLEDDisplayDriver
+# from sensors.oled_display import OLEDDisplayDriver
 
 from utils import transform_to_nmea_sentence
 from interfaces.xcsoar_tcp_stream_server import ReactiveSocketServer
@@ -44,6 +44,6 @@ if __name__ == "__main__":
         # print(volt_nmea)
         print(baro_nmea)
 
-        OLEDDisplayDriver().draw()
+        # OLEDDisplayDriver().draw()
 
         time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
