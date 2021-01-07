@@ -44,6 +44,6 @@ if __name__ == "__main__":
         # print(volt_nmea)
         print(baro_nmea)
 
-        OLEDDisplayDriver.draw()
+        OLEDDisplayDriver().draw()
 
         time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
