@@ -2,6 +2,8 @@ Adafruit-ADS1x15==1.0.2
 Adafruit-Blinka==5.9.2
 adafruit-circuitpython-bmp280==3.2.3
 adafruit-circuitpython-busdevice==5.0.1
+adafruit-circuitpython-framebuf==1.4.3
+adafruit-circuitpython-ssd1306==2.10.0
 adafruit-circuitpython-tca9548a==0.3.2
 Adafruit-GPIO==1.0.3
 Adafruit-PlatformDetect==2.23.0
