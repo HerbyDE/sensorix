@@ -23,11 +23,11 @@ class BarometricSensors(object):
             print(f"Configuring BUS {k} - CH {v}. Choices: {self.input_sensors.items()}")
             if v is 112:
                 if "static_pressure" not in self.wired_sensors.keys():
-                    self.wired_sensors["static_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-1], address=hex(v))
+                    self.wired_sensors["static_pressure"] = Adafruit_BMP280_I2C(i2c=hex(self.i2c_mux[k-1]), address=hex(v))
                 else:
-                    self.wired_sensors["tek_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-1], address=hex(v))
+                    self.wired_sensors["tek_pressure"] = Adafruit_BMP280_I2C(i2c=hex(self.i2c_mux[k-1]), address=hex(v))
             elif v is 119:
-                self.wired_sensors["dynamic_pressure"] = BMP3XX_I2C(i2c=self.i2c_mux[k-1])
+                self.wired_sensors["dynamic_pressure"] = BMP3XX_I2C(i2c=hex(self.i2c_mux[k-1]))
             else:
                 print(f"Unknown sensor detected at BUS {k} - CH {v}.")
 
