@@ -27,7 +27,7 @@ class BarometricSensors(object):
                     self.wired_sensors["tek_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k - 10], address=hex(v))
             except:
                 try:
-                    self.wired_sensors["dynamic_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k - 10], address=hex(v))
+                    self.wired_sensors["dynamic_pressure"] = BMP3XX_I2C(i2c=self.i2c_mux[k - 10], address=hex(v))
                 except:
                     print(f"Unknown sensor detected at BUS {k} - CH {v}.")
 
