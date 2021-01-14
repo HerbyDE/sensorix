@@ -33,10 +33,11 @@ class I2CTests(object):
         print(">> I2C test successful.")
 
     def check_i2c_hardware(self):
-        for bus_no in range(1, 20):
+        for bus_no in range(20):
             try:
                 bus = smbus2.SMBus(bus_no)
-                for ch in range(3, 78):
+                print(f"Testing BUS {bus_no}")
+                for ch in range(128):
                     try:
                         bus.read_byte(ch)
                         print(f"Deivce found at {bus_no} - {ch}")
