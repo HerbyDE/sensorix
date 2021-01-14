@@ -13,7 +13,7 @@ class BarometricSensors(object):
         self.i2c_mux = TCA9548A(i2c=self.i2c_bus, address=0x70)
         self.wired_sensors = dict()
 
-        # self.bmp280_1 = Adafruit_BMP280_I2C(i2c=self.i2c_mux[1], address=0x76)
+        self.bmp280_1 = Adafruit_BMP280_I2C(i2c=self.i2c_mux[1], address=0x76)
         self.bmp388 = BMP3XX_I2C(i2c=self.i2c_mux[0], address=0x77)
         # self.bmp280_2 = Adafruit_BMP280_I2C(i2c=self.i2c_mux[2], address=0x76)
 
