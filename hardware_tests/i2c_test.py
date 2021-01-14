@@ -14,9 +14,10 @@ class I2CTests(object):
         pi = pigpio.pi()  # connect to local Pi
 
         for bus in range(1, 20):
+            print(f"Testing BUS {bus}")
             try:
                 for channel in range(3, 78):
-                    print(f"Checking BUS {bus} - CH {channel}")
+                    print(f"    CH {channel}")
                     sensor = pi.i2c_open(bus, channel)
                     try:
                         pi.i2c_read_byte(sensor)
