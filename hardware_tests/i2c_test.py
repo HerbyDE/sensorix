@@ -20,9 +20,10 @@ class I2CTests(object):
                     try:
                         bus.read_byte(ch)
                         registered_devices[bus_no] = ch
-                        bus.close()
                     except:
                         pass
+
+                bus.close()
             except:
                 pass
         print(f"{len(registered_devices.keys())} sensor(s) registered on I2C Bus.")
