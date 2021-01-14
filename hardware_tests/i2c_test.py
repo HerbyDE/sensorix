@@ -16,7 +16,7 @@ class I2CTests(object):
         for bus in range(1, 20):
             try:
                 for channel in range(3, 77):
-                    print(f"Checking {hex(bus)}: {hex(channel)}")
+                    print(f"Checking BUS {bus} - CH {channel}")
                     if channel is not 70:  # 0x70 is the MUX port.
                         sensor = pi.i2c_open(bus, channel)
                         try:
