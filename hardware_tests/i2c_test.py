@@ -28,3 +28,7 @@ class I2CTests(object):
 
     def check_i2c_mux(self):
         pass
+
+
+if __name__ == "__main__":
+    I2CTests().check_i2c_bus()
