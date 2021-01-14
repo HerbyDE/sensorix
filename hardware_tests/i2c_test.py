@@ -20,6 +20,7 @@ class I2CTests(object):
                     try:
                         bus.read_byte(ch)
                         registered_devices[bus_no] = ch
+                        bus.close()
                     except:
                         pass
             except:
