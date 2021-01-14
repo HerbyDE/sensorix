@@ -19,7 +19,7 @@ class BarometricSensors(object):
         pass
 
     def identify_sensors(self):
-        for k, v in self.input_sensors:
+        for k, v in self.input_sensors.items():
             try:
                 if "static_pressure" not in self.wired_sensors.keys():
                     self.wired_sensors["static_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-10], address=hex(v))
