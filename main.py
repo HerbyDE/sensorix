@@ -4,9 +4,9 @@ import socket
 
 from sensors.barometric_pressure import Barometer
 from sensors.i2c_sensor_board import BarometricSensors
-from hardware_tests.i2c_test import I2CTests
+# from hardware_tests.i2c_test import I2CTests
 
-from utils import transform_to_nmea_sentence
+# from utils import transform_to_nmea_sentence
 
 
 class Sensorix(object):
@@ -29,8 +29,8 @@ class Sensorix(object):
 
 if __name__ == "__main__":
 
-    sensors = I2CTests().check_i2c_hardware()
-    BarometricSensors(wired_sensors=sensors).identify_sensors()
+    # sensors = I2CTests().check_i2c_hardware()
+    BarometricSensors(wired_sensors={}).identify_sensors()
 
 
 
