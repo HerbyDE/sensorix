@@ -30,7 +30,7 @@ class Sensorix(object):
 if __name__ == "__main__":
 
     sensors = I2CTests().check_i2c_hardware()
-    BarometricSensors(wired_sensors=sensors).identify_sensors()
+    BarometricSensors().read_dynamic_pressure()
 
 
 
