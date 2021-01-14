@@ -15,13 +15,14 @@ class I2CTests(object):
 
         for bus in range(1, 20):
             for channel in range(3, 77):
-                sensor = pi.i2c_open(bus, channel)
-                try:
-                    pi.i2c_read_byte(sensor)
-                    print(f">> Device found at {hex(bus)}: {hex(channel)}!")
-                except:
-                    pass
-                pi.i2c_close(sensor)
+                if channel is not 70: # 0x70 is the MUX port.
+                    sensor = pi.i2c_open(bus, channel)
+                    try:
+                        pi.i2c_read_byte(sensor)
+                        print(f">> Device found at {hex(bus)}: {hex(channel)}!")
+                    except:
+                        pass
+                    pi.i2c_close(sensor)
 
         pi.stop()  # disconnect from Pi
         print(">> I2C test successful.")
