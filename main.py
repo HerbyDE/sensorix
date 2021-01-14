@@ -2,34 +2,11 @@ import time
 import config
 import socket
 
-from sensors.barometric_pressure import Barometer
+# from sensors.barometric_pressure import Barometer
 from sensors.i2c_sensor_board import BarometricSensors
-from hardware_tests.i2c_test import I2CTests
-
-# from utils import transform_to_nmea_sentence
-
-
-class Sensorix(object):
-
-    def __init__(self):
-        # self.battery = VoltMeter()
-        self.baro = Barometer()
-
-    def read_barometric_data(self):
-        sp_measurement = self.baro.read_static_pressure()
-        # dp_measurement = self.baro.read_dynamic_pressure()
-
-        return sp_measurement
-
-    # def read_battery_data(self):
-        # Default I2C address for the A/D converter is 0x48 (48)
-        # measurement = self.battery.generate_measurement_point()
-        # return measurement
 
 
 if __name__ == "__main__":
-
-    sensors = I2CTests().check_i2c_hardware()
     BarometricSensors().read_dynamic_pressure()
 
 
