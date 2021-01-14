@@ -3,11 +3,10 @@ import config
 import socket
 
 from sensors.barometric_pressure import Barometer
-from sensors.battery_status import VoltMeter
-# from sensors.oled_display import OLEDDisplayDriver
+from sensors.i2c_sensor_board import BarometricSensors
+from hardware_tests.i2c_test import I2CTests
 
 from utils import transform_to_nmea_sentence
-from interfaces.xcsoar_tcp_stream_server import ReactiveSocketServer
 
 
 class Sensorix(object):
@@ -29,6 +28,13 @@ class Sensorix(object):
 
 
 if __name__ == "__main__":
+
+    sensors = I2CTests().check_i2c_hardware()
+    BarometricSensors(wired_sensors=sensors).identify_sensors()
+
+
+
+    """
     sens = Sensorix()
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     while True:
@@ -47,3 +53,4 @@ if __name__ == "__main__":
         # OLEDDisplayDriver().draw()
 
         time.sleep(1/config.SENSOR_SAMPLING_RATE_PER_SECOND) # Waining block to control the sampling rate.
+    """

@@ -24,7 +24,7 @@ class I2CTests(object):
                         pass
             except:
                 pass
-        print(f"{len(registered_devices.keys())} sensors registered on I2C Bus.")
+        print(f"{len(registered_devices.keys())} sensor(s) registered on I2C Bus.")
         return registered_devices
 
     def check_i2c_mux(self):
