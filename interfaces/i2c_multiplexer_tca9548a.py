@@ -15,3 +15,6 @@ class I2CMultiplex(object):
                 print(baro.pressure)
             except:
                 print(f"No device at {ch}.")
+
+if __name__ == "__main__":
+    I2CMultiplex().get_available_sensors()
