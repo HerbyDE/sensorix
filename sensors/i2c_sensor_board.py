@@ -18,7 +18,7 @@ class BarometricSensors(object):
         # self.bmp280_2 = Adafruit_BMP280_I2C(i2c=self.i2c_mux[2], address=0x76)
 
     def read_dynamic_pressure(self):
-        print(self.bmp388.pressure)
-        print(self.bmp388.altitude)
+        print(self.bmp280_1.pressure)
+        print(self.bmp280_1.altitude)
 
 
