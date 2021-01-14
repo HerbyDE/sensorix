@@ -7,9 +7,6 @@ import smbus2
 
 class I2CTests(object):
 
-    def __init__(self):
-        pass
-
     def check_i2c_hardware(self):
         registered_devices = {}
         for bus_no in range(20):
@@ -22,16 +19,8 @@ class I2CTests(object):
                         registered_devices[bus_no] = ch
                     except:
                         pass
-
                 bus.close()
             except:
                 pass
         print(f"{len(registered_devices.keys())} sensor(s) registered on I2C Bus.")
         return registered_devices
-
-    def check_i2c_mux(self):
-        pass
-
-
-if __name__ == "__main__":
-    I2CTests().check_i2c_hardware()

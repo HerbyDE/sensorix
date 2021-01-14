@@ -14,7 +14,9 @@ class BarometricSensors(object):
         self.bmp280_2 = None
         self.i2c_bus = busio.I2C(scl=board.SCL, sda=board.SDA)
         self.i2c_mux = TCA9548A(i2c=self.i2c_bus, address=0x70)
-        self.input_sensors = wired_sensors
+        self.input_sensors = {
+            11: 119,
+        }
         self.wired_sensors = dict()
         pass
 
