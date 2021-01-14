@@ -14,12 +14,12 @@ class I2CTests(object):
     def __init__(self):
         self.i2c = busio.I2C(scl=board.SCL, sda=board.SDA)
         self.i2c_mux = TCA9548A(i2c=self.i2c, address=0x70)
-        self.sens_channels = [0x48, 0x70]
+        self.sens_channels = [0x76, 0x77]
 
     def check_i2c_hardware(self):
         registered_devices = {}
 
-        for mux_ch in range(0, 7):
+        for mux_ch in range(0, 8):
             try:
                 ext_bus = self.i2c_mux[mux_ch]
                 bus = smbus2.SMBus(ext_bus)

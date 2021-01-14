@@ -8,24 +8,27 @@ from adafruit_bmp3xx import BMP3XX_I2C
 
 class BarometricSensors(object):
 
-    def __init__(self, wired_sensors: dict):
+    def __init__(self):
         self.bmp280_1 = None
         self.bmp388 = None
         self.bmp280_2 = None
         self.i2c_bus = busio.I2C(scl=board.SCL, sda=board.SDA)
         self.i2c_mux = TCA9548A(i2c=self.i2c_bus, address=0x70)
-        self.input_sensors = wired_sensors
+        self.input_sensors = {
+            0: 0x77,
+            1: 0x76,
+            2: 0x76
+        }
         self.wired_sensors = dict()
-        pass
 
     def identify_sensors(self):
         for k, v in self.input_sensors.items():
             print(f"Configuring BUS {k} - CH {v}. Choices: {self.input_sensors.items()}")
             if v is 112:
                 if "static_pressure" not in self.wired_sensors.keys():
-                    self.wired_sensors["static_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-1], address=0x48)
+                    self.wired_sensors["static_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-1], address=0x76)
                 else:
-                    self.wired_sensors["tek_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-1], address=0x48)
+                    self.wired_sensors["tek_pressure"] = Adafruit_BMP280_I2C(i2c=self.i2c_mux[k-1], address=0x76)
             elif v is 119:
                 self.wired_sensors["dynamic_pressure"] = BMP3XX_I2C(i2c=self.i2c_mux[k-1])
             else:
