@@ -19,7 +19,7 @@ class I2CTests(object):
     def check_i2c_hardware(self):
         registered_devices = {}
 
-        for mux_ch in self.i2c_mux.channels:
+        for mux_ch in range(0, 7):
             try:
                 ext_bus = self.i2c_mux[mux_ch]
                 bus = smbus2.SMBus(ext_bus)
