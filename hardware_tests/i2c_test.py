@@ -21,8 +21,9 @@ class I2CTests(object):
                     sensor = pi.i2c_open(bus, channel)
                     try:
                         pi.i2c_read_byte(sensor)
-                        print(f"    >> Device found: {channel}!")
+                        print(f">>  CH {channel} - Device found!")
                     except:
+                        print(f"    CH {channel} - No device.")
                         pass
                     pi.i2c_close(sensor)
             except:
