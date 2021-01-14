@@ -11,6 +11,7 @@ class I2CTests(object):
         pass
 
     def check_i2c_hardware(self):
+        registered_devices = {}
         for bus_no in range(20):
             try:
                 bus = smbus2.SMBus(bus_no)
@@ -18,11 +19,13 @@ class I2CTests(object):
                 for ch in range(128):
                     try:
                         bus.read_byte(ch)
-                        print(f"Deivce found at BUS {bus_no} - {ch}")
+                        registered_devices[bus_no] = ch
                     except:
                         pass
             except:
                 pass
+        print(f"{len(registered_devices.keys())} sensors registered on I2C Bus.")
+        return registered_devices
 
     def check_i2c_mux(self):
         pass
