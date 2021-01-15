@@ -6,6 +6,7 @@ import math
 from adafruit_bmp280 import Adafruit_BMP280_I2C
 from adafruit_tca9548a import TCA9548A
 from adafruit_bmp3xx import BMP3XX_I2C
+from Adafruit_ADS1x15 import ADS1115
 
 class BarometricSensors(object):
     """
@@ -103,3 +104,29 @@ class BarometricSensors(object):
         }
 
         return output
+
+
+class VoltMeter(object):
+
+    def __init__(self):
+        self.i2c_bus = busio.I2C(scl=board.SCL, sda=board.SDA)
+        self.i2c_mux = TCA9548A(i2c=self.i2c_bus, address=0x70)
+
+        self.adc = ADS1115(i2c=self.i2c_mux[3], address=0x56)
+        self.volt_gain = 1
+        # Measures for standard lear batteries with nominal 12V
+        self.full = 12.65       # V
+        self.empty = 11.99      # V
+
+    def read_voltage(self):
+        """
+        This method reads the absolute voltage from a simple voltage splitter with one 10k and a 5k resistor.
+        The measures are set to fit for widely used lead batteries with 12V. Therefore, the max. capacity is 12.65V
+        while the battery is considered empty with 11.99V.
+        :return:
+        """
+        measure = self.adc.read_adc(channel=0, gain=self.volt_gain)
+        voltage_factor = 17200 / 12.2
+        actual_voltage = round(measure / voltage_factor, 2)
+
+        return actual_voltage
